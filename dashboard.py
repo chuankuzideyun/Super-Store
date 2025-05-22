@@ -127,5 +127,11 @@ with pie2:
 
 #建立散点图
 sca = px.scatter(filtered_df, x="Sales", y="Profit", size="Quantity")
-sca.update_layout(title="Relationship between Sales and Profits using Scatter Plot", titlefont=dict(size=25))
+sca.update_layout(
+    title=dict(
+        text="Relationship between Sales and Profits using Scatter Plot",
+        font=dict(size=25)
+    )
+)
 st.plotly_chart(sca, use_container_width=True)
+
